@@ -1,0 +1,32 @@
+.postSlider {
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%; 
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slideImg {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.slideInfo {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}

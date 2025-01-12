@@ -1,0 +1,30 @@
+.your-posts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    gap: 20px; 
+}
+
+
+@media (max-width: 768px) {
+    .your-posts {
+        flex-direction: column; 
+    }
+    
+    .your-posts > * {
+        margin: 10px 0; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .your-posts {
+        margin: 10px; 
+        gap: 10px; 
+    }
+    
+    .your-posts > * {
+        margin: 5px 0; 
+    }
+}

@@ -1,0 +1,30 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    gap: 20px; 
+}
+
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; 
+    }
+    
+    .home > * {
+        margin: 10px 0; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .home {
+        margin: 10px; 
+        gap: 10px; 
+    }
+    
+    .home > * {
+        margin: 5px 0; 
+    }
+}

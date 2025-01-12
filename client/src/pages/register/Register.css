@@ -1,0 +1,170 @@
+.register {
+    /* height: calc(100vh - 50px); */
+    height: 100vh+200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        rgba(102, 126, 234, 0.7) 0%,
+        rgba(118, 75, 162, 0.7) 100%
+    ),
+    url('../../images/register.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.registerTitle {
+    font-size: 50px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    animation: slideInDown 1s ease-in-out;
+}
+
+@keyframes slideInDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.registerForm {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1s ease;
+}
+
+@keyframes bounceIn {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.registerForm label {
+    font-size: 16px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease;
+}
+
+.registerInput {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+    animation: fadeIn 0.8s ease;
+}
+
+.registerInput:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(108, 99, 255, 0.2);
+}
+
+.registerButton {
+    padding: 12px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #6c63ff, #7f53ac);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: zoomIn 1s ease;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.9); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.registerButton:hover {
+    background: linear-gradient(135deg, #5a50d1, #6c63ff);
+    transform: scale(1.05);
+}
+
+.registerLoginButton {
+    position: absolute;
+    margin-top: 20px;
+    top: 60px;
+    right: 20px;
+    background: #6c63ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.registerLoginButton:hover {
+    background: #4a42b5;
+    transform: scale(1.1);
+}
+
+.errorMessage {
+    color: #e74c3c;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+.usernameCheck {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.available {
+    color: #28a745; 
+}
+
+.notAvailable {
+    color: #dc3545; 
+}
+
+.registerForm label {
+    font-size: 16px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease;
+}
+
+.registerInput {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+    animation: fadeIn 0.8s ease;
+}

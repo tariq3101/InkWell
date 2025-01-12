@@ -1,0 +1,50 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+# Node.js (Frontend and Backend)
+client/node_modules/
+api/node_modules/
+
+# Build output
+client/dist/
+client/build/
+api/dist/
+api/build/
+
+# Environment files
+client/.env
+client/.env.local
+client/.env.*.local
+api/.env
+api/.env.local
+api/.env.*.local
+
+# Logs
+client/npm-debug.log*
+api/npm-debug.log*
+client/yarn-debug.log*
+api/yarn-debug.log*
+client/yarn-error.log*
+api/yarn-error.log*
+
+# IDE/Editor specific
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Custom configuration files
+client/*.config.js
+api/*.config.js
+client/*.config.json
+api/*.config.json

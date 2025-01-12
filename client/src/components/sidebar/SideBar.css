@@ -1,0 +1,142 @@
+.sidebar {
+    max-width: 600px;
+    flex: 3;
+    margin: 20px;
+    padding-bottom: 30px;
+    background-color: #fdfbfb;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transition */
+}
+
+.sidebar:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.about-img {
+    max-width: 200px;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Animation for image fade-in */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sidebarItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideIn 0.5s ease-out forwards; /* Slide in effect for sidebar items */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.sidebarTitle {
+    margin: 10px;
+    padding: 5px;
+    width: 80%;
+    border-top: 1px solid #a7a4a4;
+    border-bottom: 1px solid #a7a4a4;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 12px;
+    color: #222;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transition for title */
+}
+
+.sidebarTitle:hover {
+    color: #ff6347;
+    background-color: #f0f0f0;
+}
+
+.sidebarItem img {
+    margin-top: 15px;
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Image scale effect */
+}
+
+.sidebarItem img:hover {
+    transform: scale(1.05);
+}
+
+.sidebarItem p {
+    padding: 20px; 
+    font-size: 14px; 
+    text-align: center;
+}
+
+.sidebarList {
+    list-style: none;
+    padding: 0;
+    width: 100%; 
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards; /* Fade-in for the list */
+}
+
+.sidebarListItem {
+    display: inline-block;
+    margin: 10px 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #444;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
+}
+
+.sidebarListItem:hover {
+    color: #ff6347;
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.sidebarSocial {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 0.6s forwards; /* Fade and slide up animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.sidebarIcon {
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Icon hover transition */
+}
+
+.sidebarIcon:hover {
+    color: #ff6347;
+    transform: rotate(15deg); /* Slight rotation on hover */
+}
