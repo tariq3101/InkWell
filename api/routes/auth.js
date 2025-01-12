@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const User = require("../models/User");
 const bcryptjs = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 // REGISTER
 router.post("/register", async (req, res) => {
@@ -38,6 +39,15 @@ router.post("/login", async (req, res) => {
             return res.status(400).json("Wrong Password");
         }
 
+        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+        // console.log(token)
+        res.cookie('token', token, {
+            httpOnly: true, 
+            secure: process.env.NODE_ENV === 'production', 
+            sameSite: 'strict',
+            maxAge: 60 * 60 * 1000, // 1 hour
+        });
+        // console.log(token)
         const { password, ...others } = user._doc;
         res.status(200).json(others);
     } catch (err) {

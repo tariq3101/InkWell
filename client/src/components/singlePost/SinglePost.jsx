@@ -9,7 +9,6 @@ import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { toast } from 'react-toastify';
-import LikesModal from './LikesModal';
 
 const toolbarOptions = [
     [{ header: [1, 2, false] }],
@@ -27,14 +26,11 @@ const SinglePost = () => {
     const [desc, setDesc] = useState("");
     const [updateMode, setUpdateMode] = useState(false);
     const [likeCount, setLikeCount] = useState(0);
-    const [likes, setLikes] = useState([]);
     const [liked, setLiked] = useState(false);
     const [summary, setSummary] = useState('');
     const [isSummarized, setIsSummarized] = useState(false);
     const [loadingSummary, setLoadingSummary] = useState(false);
     const { user } = useContext(Context);
-    const [showLikesModal, setShowLikesModal] = useState(false);
-    const [file, setFile] = useState(null);
 
     const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
@@ -47,7 +43,6 @@ const SinglePost = () => {
                 setTitle(data.title);
                 setDesc(data.desc);
                 setLikeCount(data.likeCount);
-                setLikes(data.likes || []);
                 if (user) setLiked(data.likes.includes(user.username));
             } catch (err) {
                 console.error(err);
@@ -113,7 +108,6 @@ const SinglePost = () => {
         }
     };
 
-
     const handleLike = async () => {
         if (!user) {
             toast.warn("You must be logged in to like this post.");
@@ -124,7 +118,6 @@ const SinglePost = () => {
             const res = await axios.put(`/posts/${post._id}/like`, {
                 username: user.username,
             });
-            setLikes(res.data.likes);
             setLikeCount(res.data.likeCount);
             setLiked(!liked);
         } catch (err) {
@@ -150,9 +143,51 @@ const SinglePost = () => {
         }
     };
 
-    const showLikes = () => {
-        alert('Likes: \n' + likes.join('\n'));
+    const showLikes = async () => {
+        try {
+            const res = await axios.get(`/posts/${post._id}/likes`);
+            const likeDetails = res.data.map(like => `
+                <div class="likeUser">
+                    <img src="${like.profilePic || 'default-profile-pic.jpg'}" alt="${like.username}'s profile picture" class="likeUserImg"/>
+                    <span>${like.username}</span>
+                </div>
+            `).join('');
+    
+            const width = 300;
+            const height = 400;
+            const left = (window.innerWidth - width) / 2 + window.screenX;
+            const top = (window.innerHeight - height) / 2 + window.screenY;
+    
+            const likeWindow = window.open(
+                "", 
+                "Likes", 
+                `width=${width},height=${height},top=${top},left=${left},resizable=no,scrollbars=yes`
+            );
+            
+            likeWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Likes</title>
+                        <style>
+                            body { font-family: Arial, sans-serif; padding: 10px; }
+                            .likeUser { display: flex; align-items: center; margin-bottom: 10px; }
+                            .likeUserImg { width: 47px; height: 45px; border-radius: 50%; margin-right: 10px; }
+                        </style>
+                    </head>
+                    <body>
+                        <h2>Likes</h2>
+                        ${likeDetails}
+                    </body>
+                </html>
+            `);
+            likeWindow.document.title = "Likes";
+        } catch (err) {
+            console.error(err);
+            toast.error("Failed to fetch like details.");
+        }
     };
+    
+    
 
     return (
         <div className="singlePost">
@@ -172,7 +207,6 @@ const SinglePost = () => {
                     <button className="showLikesButton" onClick={showLikes}>
                         Show Likes
                     </button>
-                    {showLikesModal && <LikesModal users={likes} onClose={() => setShowLikesModal(false)} />}
                 </div>
 
                 <div className="singlePostTitleSection">
@@ -195,10 +229,10 @@ const SinglePost = () => {
                                         <i className="singlePostIcon fa-solid fa-image"></i>
                                     </label>
                                     <input
-                                        type="file" 
+                                        type="file"
                                         id="updateImageInput"
                                         className="hiddenInput"
-                                        style={{display: "none"}}
+                                        style={{ display: "none" }}
                                         accept="image/*"
                                         onChange={handleImage}
                                     />

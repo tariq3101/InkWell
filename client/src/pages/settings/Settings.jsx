@@ -13,6 +13,25 @@ const Settings = () => {
     const [password, setPassword] = useState("");
     const { user, dispatch } = useContext(Context);
     const [isLoading, setIsLoading] = useState(false);
+    const [isAvailable, setIsAvailable] = useState(null);
+
+    const checkUsernameAvailability = async (username) => {
+        if (!username) return;
+        try {
+            const res = await axios.get(`/auth/check-username/${username}`);
+            setIsAvailable(res.data.available);
+        } catch (err) {
+            console.error("Error checking username availability", err);
+        }
+    };
+
+    useEffect(() => {
+        const delayDebounceFn = setTimeout(() => {
+            checkUsernameAvailability(username);
+        }, 500);
+
+        return () => clearTimeout(delayDebounceFn);
+    }, [username]);
 
     const handleSubmit = async (e) => {
         setIsLoading(true);
@@ -109,6 +128,11 @@ const Settings = () => {
                         value={username} 
                         onChange={e => setUsername(e.target.value)} 
                     />
+                    {isAvailable === null ? null : (
+                    <span className={`usernameCheck ${isAvailable ? "available" : "notAvailable"}`}>
+                        {isAvailable ? "Username available" : "Username not available"}
+                    </span>
+                )}
                     <label>Email</label>
                     <input 
                         type='text' 
