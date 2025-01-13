@@ -60,3 +60,7 @@ app.use("/api/summarize", summerization);
 app.listen(process.env.PORT, () => {
     console.log("Backend is running successfully");
 });
+
+app.get("/", (req, res) =>{
+    res.send("Hello");
+});
