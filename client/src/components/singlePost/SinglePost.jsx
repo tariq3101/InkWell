@@ -93,7 +93,7 @@ const SinglePost = () => {
             const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/upload`, data);
             const photo = res.data.url;
 
-            await axios.patch(`/posts/${post._id}`, {
+            await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/posts/${post._id}`, {
                 username: user.username,
                 photo,
             });
