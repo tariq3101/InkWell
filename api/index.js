@@ -35,21 +35,20 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
-        folder: "Blogging", // Cloudinary folder where images will be stored
-        allowed_formats: ["jpg", "png", "jpeg", "mp4"], // Optional: restrict formats
+        folder: "Blogging", 
+        allowed_formats: ["jpg", "png", "jpeg", "mp4"], 
     },
 });
 
 const upload = multer({ storage: storage });
 
 app.post("/api/upload", upload.single("file"), (req, res) => {
-    console.log(req.file); // Log the complete file object
+    console.log(req.file); 
     res.status(200).json({
         message: "File uploaded successfully",
-        url: req.file.path, // This is the Cloudinary URL
+        url: req.file.path, 
     });
 });
-
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
@@ -58,6 +57,6 @@ app.use("/api/categories", categoryRoute);
 app.use("/api/comments", commentRoute);
 app.use("/api/summarize", summerization);
 
-app.listen("5000", () => {
+app.listen(process.env.PORT, () => {
     console.log("Backend is running successfully");
 });

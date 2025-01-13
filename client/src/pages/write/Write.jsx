@@ -45,7 +45,7 @@ const Write = () => {
       // data.append("upload_preset", "your_upload_preset"); // Cloudinary upload preset
 
       try {
-        const response = await axios.post("/upload", data);
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/upload`, data);
         const imageUrl = response.data.url; // Get the uploaded image URL from Cloudinary
 
         newPost.photo = imageUrl; // Save the URL directly in the `photo` field
@@ -58,7 +58,7 @@ const Write = () => {
     }
 
     try {
-      const res = await axios.post('/posts', newPost);
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/posts`, newPost);
       toast.success('Post created successfully!');
       setIsLoading(false);
       window.location.replace('/post/' + res.data._id);

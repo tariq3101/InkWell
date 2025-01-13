@@ -1,24 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './SideBar.css';
 import logo from '../../images/logo.jpeg';
-import axios from "axios";
-import { Link } from 'react-router-dom';
 
 const SideBar = () => {
-  const [cats, setCats] = useState([]);
-
-  useEffect(() => {
-    const getCats = async () => {
-      try {
-        const res = await axios.get("/categories");
-        setCats(res.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    getCats();
-  }, []);
-
   return (
     <div className='sidebar'>
       <div className="sidebarItem">
@@ -30,16 +14,6 @@ const SideBar = () => {
           or just get inspired, we're excited to have you as part of our community. We focus on quality
           content, diverse perspectives, and creating a meaningful space for people to connect.</p>
       </div>
-      {/* <div className="sidebarItem">
-        <span className="sidebarTitle">CATEGORIES</span>
-        <ul className="sidebarList">
-          {cats.map((c) => (
-            <Link to={`/?cat=${c.name}`} className="link" key={c._id}>
-              <li className="sidebarListItem">{c.name}</li>
-            </Link>
-          ))}
-        </ul>
-      </div> */}
       <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW US</span>
         <div className="sidebarSocial">

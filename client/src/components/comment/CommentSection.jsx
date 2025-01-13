@@ -19,7 +19,7 @@ const CommentSection = () => {
     useEffect(() => {
         const fetchComments = async () => {
             try {
-                const response = await axios.get(`/comments/${postId}`);
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/comments/${postId}`);
                 const sortedComments = response.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
                 setComments(sortedComments);
                 setLoading(false);
@@ -47,7 +47,7 @@ const CommentSection = () => {
 
         try {
             setSubmitting(true); 
-            const response = await axios.post('/comments', {
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/comments`, {
                 postId,
                 text: newComment,
                 username: user.username,
@@ -67,7 +67,7 @@ const CommentSection = () => {
 
     const handleDelete = async (commentId) => {
         try {
-            await axios.delete(`/comments/${commentId}`, {
+            await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/comments/${commentId}`, {
                 data: { username: user.username }
             });
             setComments((prevComments) => prevComments.filter(comment => comment._id !== commentId));
@@ -83,7 +83,7 @@ const CommentSection = () => {
         if (!updatedText) return;
 
         try {
-            const response = await axios.put(`/comments/${commentId}`, {
+            const response = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/comments/${commentId}`, {
                 text: updatedText,
                 username: user.username,
             });

@@ -18,7 +18,7 @@ const Settings = () => {
     const checkUsernameAvailability = async (username) => {
         if (!username) return;
         try {
-            const res = await axios.get(`/auth/check-username/${username}`);
+            const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/auth/check-username/${username}`);
             setIsAvailable(res.data.available);
         } catch (err) {
             console.error("Error checking username availability", err);
@@ -56,7 +56,7 @@ const Settings = () => {
             // data.append("upload_preset", "your_upload_preset"); // Cloudinary upload preset
       
             try {
-              const response = await axios.post("/upload", data);
+              const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/upload`, data);
               const imageUrl = response.data.url; // Get the uploaded image URL from Cloudinary
       
               updatedUser.profilePic = imageUrl; // Save the URL directly in the `photo` field
@@ -71,7 +71,7 @@ const Settings = () => {
           }
 
         try {
-            const res = await axios.patch(`/users/${user._id}`, updatedUser);
+            const res = await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/users/${user._id}`, updatedUser);
             dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
             toast.success("Profile has been updated!");
         } catch (err) {
@@ -85,7 +85,7 @@ const Settings = () => {
         const confirmDelete = window.confirm("Are you sure you want to delete your account?");
         if (confirmDelete) {
             try {
-                await axios.delete(`/users/${user._id}`, { data: { userId: user._id } });
+                await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/users/${user._id}`, { data: { userId: user._id } });
                 dispatch({ type: "LOGOUT" });
                 window.location.replace("/");
                 toast.success("Account deleted successfully.");

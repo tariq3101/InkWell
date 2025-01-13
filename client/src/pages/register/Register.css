@@ -120,6 +120,16 @@
     transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+    .registerLoginButton {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 10px 0 0 0;
+        
+    }
+}
+
 .errorMessage {
     color: #e74c3c;
     margin-top: 10px;

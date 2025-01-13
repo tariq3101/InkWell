@@ -45,7 +45,7 @@ const Login = () => {
         }
 
         try {
-            const res = await axios.post("/auth/login", { username, password });
+            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, { username, password });
             dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
             toast.success('Login successful!', {
                 position: 'top-center',
@@ -80,14 +80,14 @@ const Login = () => {
         
 
         try {
-            const res = await axios.post("/auth/forgot-password/verify-answer", 
+            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/forgot-password/verify-answer`, 
             {
                 username,
                 securityAnswer
             });
 
             if (res.data.message === "Security answer verified.") {
-                await axios.patch("/auth/forgot-password/reset", 
+                await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/auth/forgot-password/reset`, 
                 { 
                     username, 
                     newPassword 
@@ -119,7 +119,7 @@ const Login = () => {
         const username = userRef.current.value;
         if (username) {
             try {
-                const res = await axios.post("/auth/get-security-question", { username });
+                const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/get-security-question`, { username });
                 setSecurityQuestion(res.data.securityQuestion);
             } catch (err) {
                 console.error('Error fetching security question:', err);

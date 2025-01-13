@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get(`/posts${search}`);
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/posts${search}`);
         const sortedPosts = res.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         setPosts(sortedPosts);
       } catch (err) {

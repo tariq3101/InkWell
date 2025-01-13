@@ -18,7 +18,7 @@ export default function Ypost() {
       }
 
       try {
-        const res = await axios.get(`/posts/user/${user.username}`);
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/posts/user/${user.username}`);
         const sortedPosts = res.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         
         setPosts(sortedPosts);

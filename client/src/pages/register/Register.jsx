@@ -25,7 +25,7 @@ const Register = () => {
     const checkUsernameAvailability = async (username) => {
         if (!username) return;
         try {
-            const res = await axios.get(`/auth/check-username/${username}`);
+            const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/auth/check-username/${username}`);
             setIsAvailable(res.data.available);
         } catch (err) {
             console.error("Error checking username availability", err);
@@ -63,7 +63,7 @@ const Register = () => {
         }
         
         try {
-            const res = await axios.post("/auth/register", {
+            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/register`, {
                 username,
                 email,
                 password,

@@ -32,12 +32,12 @@ const SinglePost = () => {
     const [loadingSummary, setLoadingSummary] = useState(false);
     const { user } = useContext(Context);
 
-    const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+    const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
     useEffect(() => {
         const getPost = async () => {
             try {
-                const res = await axios.get(`/posts/${path}`);
+                const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/posts/${path}`);
                 const data = res.data;
                 setPost(data);
                 setTitle(data.title);
@@ -55,7 +55,7 @@ const SinglePost = () => {
     const handleDelete = async () => {
         if (!user) return;
         try {
-            await axios.delete(`/posts/${post._id}`, {
+            await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/posts/${post._id}`, {
                 data: { username: user.username },
             });
             toast.success("Post deleted successfully!");
@@ -69,7 +69,7 @@ const SinglePost = () => {
     const handleUpdate = async () => {
         if (!user) return;
         try {
-            await axios.patch(`/posts/${post._id}`, {
+            await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/posts/${post._id}`, {
                 username: user.username,
                 title,
                 desc,
@@ -90,7 +90,7 @@ const SinglePost = () => {
         data.append("file", selectedFile);
 
         try {
-            const res = await axios.post(`/upload`, data);
+            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/upload`, data);
             const photo = res.data.url;
 
             await axios.patch(`/posts/${post._id}`, {
@@ -115,7 +115,7 @@ const SinglePost = () => {
         }
 
         try {
-            const res = await axios.put(`/posts/${post._id}/like`, {
+            const res = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/posts/${post._id}/like`, {
                 username: user.username,
             });
             setLikeCount(res.data.likeCount);
@@ -131,7 +131,7 @@ const SinglePost = () => {
         const prompt = `${post?.desc || ''}\n\nPlease summarize the above content in 2-3 sentences and highlight keywords.`;
 
         try {
-            const res = await axios.post(`/summarize`, { text: prompt });
+            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/summarize`, { text: prompt });
             setSummary(res.data.generatedText.replace(/[*_~`]+/g, ''));
             setIsSummarized(true);
             toast.success("Summarization completed!");
@@ -145,7 +145,7 @@ const SinglePost = () => {
 
     const showLikes = async () => {
         try {
-            const res = await axios.get(`/posts/${post._id}/likes`);
+            const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/posts/${post._id}/likes`);
             const likeDetails = res.data.map(like => `
                 <div class="likeUser">
                     <img src="${like.profilePic || 'default-profile-pic.jpg'}" alt="${like.username}'s profile picture" class="likeUserImg"/>
@@ -171,7 +171,12 @@ const SinglePost = () => {
                         <style>
                             body { font-family: Arial, sans-serif; padding: 10px; }
                             .likeUser { display: flex; align-items: center; margin-bottom: 10px; }
-                            .likeUserImg { width: 47px; height: 45px; border-radius: 50%; margin-right: 10px; }
+                            .likeUserImg { width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                object-fit: cover;
+                                cursor: pointer;
+                                margin-right: 10px; }
                         </style>
                     </head>
                     <body>
@@ -187,8 +192,6 @@ const SinglePost = () => {
         }
     };
     
-    
-
     return (
         <div className="singlePost">
             <div className="singlePostWrapper">
