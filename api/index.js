@@ -42,7 +42,7 @@ const storage = new CloudinaryStorage({
 
 const upload = multer({ storage: storage });
 
-app.post("/api/upload", upload.single("file"), (req, res) => {
+app.post("/upload", upload.single("file"), (req, res) => {
     console.log(req.file); 
     res.status(200).json({
         message: "File uploaded successfully",
@@ -50,12 +50,12 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
     });
 });
 
-app.use("/api/auth", authRoute);
-app.use("/api/users", userRoute);
-app.use("/api/posts", postRoute);
-app.use("/api/categories", categoryRoute);
-app.use("/api/comments", commentRoute);
-app.use("/api/summarize", summerization);
+app.use("/auth", authRoute);
+app.use("/users", userRoute);
+app.use("/posts", postRoute);
+app.use("/categories", categoryRoute);
+app.use("/comments", commentRoute);
+app.use("/summarize", summerization);
 
 app.listen(process.env.PORT, () => {
     console.log("Backend is running successfully");
