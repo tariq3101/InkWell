@@ -85,7 +85,7 @@
     font-weight: bold;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .commentForm textarea {
         font-size: 14px;
     }
