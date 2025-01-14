@@ -1,6 +1,6 @@
 .about{
   background: url('../../images/about.webp');
-  height: 100vh;
+  /* height: 100vh; */
   background-size: cover;
   background-blend-mode: overlay;
   display: flex;
