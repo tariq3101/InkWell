@@ -11,7 +11,9 @@ import { useContext } from "react";
 import { Context } from "./context/Context";
 import ContactUs from "./pages/contactus/ContactUs";
 import Yposts from './pages/ypost/Ypost'
+import Landing from './pages/landing/LandingPage'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const {user} = useContext(Context);
@@ -19,7 +21,7 @@ function App() {
     <Router>
       <TopBar />
       <Routes>
-        <Route path="/" element={<Home />}/>
+        <Route path="/home" element={<Home />}/>
         <Route path="/register" element={user ? <Home /> : <Register />}/>
         <Route path="/login" element={user ? <Home /> : <Login />}/>
         <Route path="/write" element={user ? <Write /> : <Register />}/>
@@ -28,7 +30,9 @@ function App() {
         <Route path="/about" element={<AboutUs />}/>
         <Route path="/contact" element={<ContactUs />}/>
         <Route path="/your-posts" element={<Yposts />}/>
+        <Route path="/" element={<Landing />}/>
       </Routes>
+      <Analytics />
     </Router>
   );
 }

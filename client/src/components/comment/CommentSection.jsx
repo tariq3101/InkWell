@@ -100,7 +100,6 @@ const CommentSection = () => {
 
     return (
         <ResizableBox
-            width={500}
             height={400}
             minConstraints={[300, 200]}
             maxConstraints={[1000, 800]}

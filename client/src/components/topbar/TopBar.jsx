@@ -36,7 +36,7 @@ const TopBar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">HOME</Link>
+                            <Link to="/home" className="nav-link">HOME</Link>
                         </li>
                         <li className="nav-item">   
                             <Link to="/about" className="nav-link">ABOUT</Link>
