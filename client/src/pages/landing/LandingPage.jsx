@@ -1,9 +1,20 @@
 import React from 'react';
 import './LandingPage.css';
 import SideBar from '../../components/sidebar/SideBar';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Context } from '../../context/Context';
+import { useContext, useEffect } from 'react';
 
 const LandingPage = () => {
+  const { user } = useContext(Context);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      navigate('/home');
+    }
+  }, [user, navigate]);
+
   return (
     <div className="landing-page">
       {/* Hero Section */}
@@ -20,43 +31,24 @@ const LandingPage = () => {
       {/* About Section */}
       <section className="about">
         <div className="about-content">
-         <SideBar />
-         <h2>Features</h2>
-        <div className="feature-cards">
-          <div className="feature-card">
-            <h3>Create & Share</h3>
-            <p>Write your stories and share them with a global audience.</p>
+          <SideBar />
+          <h2>Features</h2>
+          <div className="feature-cards">
+            <div className="feature-card">
+              <h3>Create & Share</h3>
+              <p>Write your stories and share them with a global audience.</p>
+            </div>
+            <div className="feature-card">
+              <h3>Summarized Posts</h3>
+              <p>Get quick summaries of your favorite posts with just a click.</p>
+            </div>
+            <div className="feature-card">
+              <h3>Engage & Connect</h3>
+              <p>Engage with other writers and build your creative network.</p>
+            </div>
           </div>
-          <div className="feature-card">
-            <h3>Summarized Posts</h3>
-            <p>Get quick summaries of your favorite posts with just a click.</p>
-          </div>
-          <div className="feature-card">
-            <h3>Engage & Connect</h3>
-            <p>Engage with other writers and build your creative network.</p>
-          </div>
-        </div>
         </div>
       </section>
-
-      {/* Features Section */}
-      {/* <section className="features">
-        <h2>Features</h2>
-        <div className="feature-cards">
-          <div className="feature-card">
-            <h3>Create & Share</h3>
-            <p>Write your stories and share them with a global audience.</p>
-          </div>
-          <div className="feature-card">
-            <h3>Summarized Posts</h3>
-            <p>Get quick summaries of your favorite posts with just a click.</p>
-          </div>
-          <div className="feature-card">
-            <h3>Engage & Connect</h3>
-            <p>Engage with other writers and build your creative network.</p>
-          </div>
-        </div>
-      </section> */}
 
       {/* Footer */}
       <footer className="footer">

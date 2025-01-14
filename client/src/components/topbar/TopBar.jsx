@@ -35,42 +35,43 @@ const TopBar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     {user ? (<ul className="navbar-nav me-auto mb-2 mb-lg-0">
+
                         <li className="nav-item">
                             <Link to="/home" className="nav-link">HOME</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/about" className="nav-link">ABOUT</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/contact" className="nav-link">CONTACT</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/write" className="nav-link">WRITE</Link>
                         </li>
                         <li className="nav-item" onClick={handleYourPostsClick}>
                             <span className="nav-link" style={{ cursor: 'pointer' }}>YOUR POSTS</span>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/about" className="nav-link">ABOUT</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/contact" className="nav-link">CONTACT</Link>
                         </li>
                         <li className="nav-item" onClick={handleLogout}>
                             {user && <span className="nav-link" style={{ cursor: 'pointer' }}>LOGOUT</span>}
                         </li>
                     </ul>)
                         : (<ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <Link to="/about" className="nav-link">ABOUT</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/contact" className="nav-link">CONTACT</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/write" className="nav-link">WRITE</Link>
-                        </li>
-                        <li className="nav-item" onClick={handleYourPostsClick}>
-                            <span className="nav-link" style={{ cursor: 'pointer' }}>YOUR POSTS</span>
-                        </li>
-                        <li className="nav-item" onClick={handleLogout}>
-                            {user && <span className="nav-link" style={{ cursor: 'pointer' }}>LOGOUT</span>}
-                        </li>
-                    </ul>)}
+                            <li className="nav-item">
+                                <Link to="/write" className="nav-link">WRITE</Link>
+                            </li>
+                            <li className="nav-item" onClick={handleYourPostsClick}>
+                                <span className="nav-link" style={{ cursor: 'pointer' }}>YOUR POSTS</span>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/about" className="nav-link">ABOUT</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/contact" className="nav-link">CONTACT</Link>
+                            </li>
+                            <li className="nav-item" onClick={handleLogout}>
+                                {user && <span className="nav-link" style={{ cursor: 'pointer' }}>LOGOUT</span>}
+                            </li>
+                        </ul>)}
 
 
                     <div className="d-flex">
