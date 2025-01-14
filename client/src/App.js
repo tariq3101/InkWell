@@ -14,6 +14,7 @@ import Yposts from './pages/ypost/Ypost'
 import Landing from './pages/landing/LandingPage'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   const {user} = useContext(Context);
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<Landing />}/>
       </Routes>
       <Analytics />
+      <SpeedInsights />
     </Router>
   );
 }
