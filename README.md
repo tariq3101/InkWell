@@ -13,9 +13,7 @@
 - [Dependencies](#-dependencies)
 - [Troubleshooting](#-troubleshooting)
 - [Contributors](#-contributors)
-
----
-
+  
 ---
 Project URL: https://ink-welll.vercel.app/
 ---
@@ -121,6 +119,7 @@ The backend will run on `http://localhost:5000` (or configured port).
 Both backend and frontend may require environment variables. Create a `.env` file in each directory with values like:
 
 ```
+Backend .env file:
 PORT=5000
 MONGO_URL=your_database_url
 JWT_SECRET=your_secret
@@ -129,11 +128,10 @@ CLOUDINARY_CLOUD_NAME=your_cloudinary_name
 CLOUDINARY_API_KEY=your_cloudinary_key
 CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 FRONTEND_URL=http://localhost:3000/ or configured
+
+Frontend .env file:
+REACT_APP_BACKEND_URL=http://localhost:5000
 ```
-
-*(Update based on actual configuration in code.)*
-
----
 
 ## 📦 Dependencies
 
