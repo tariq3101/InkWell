@@ -10,7 +10,6 @@
 - [Usage](#-usage)
 - [Configuration](#-configuration)
 - [Dependencies](#-dependencies)
-- [Troubleshooting](#-troubleshooting)
 - [Contributors](#-contributors)
   
 ---
@@ -172,13 +171,6 @@ REACT_APP_BACKEND_URL=http://localhost:5000
 | ![Axios](https://img.shields.io/badge/Axios-HTTP%20Client-blue?logo=axios) | HTTP client for API calls | [Axios](https://axios-http.com/) |
 | ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-purple?logo=bootstrap) | CSS Framework | [Bootstrap](https://getbootstrap.com/) |
 
-
----
-
-## 🛠 Troubleshooting
-- **App not starting?** Check Node.js version (`>=16` recommended).
-- **Database connection error?** Ensure your `.env` contains the correct `MONGO_URL`.
-- **CORS issues?** Confirm backend CORS policy allows frontend origin.
 
 ---
 
