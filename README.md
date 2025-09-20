@@ -155,17 +155,18 @@ REACT_APP_BACKEND_URL=http://localhost:5000
 
 ### Frontend
 
-![Node.js](https://img.shields.io/badge/node.js-18.x-green?style=flat&logo=node.js&logoColor=white) 
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=flat&logo=express&logoColor=%2361DAFB) 
-![MongoDB](https://img.shields.io/badge/mongodb-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white) 
-![Mongoose](https://img.shields.io/badge/mongoose-orange?style=flat&logo=mongodb&logoColor=white) 
-![CORS](https://img.shields.io/badge/cors-2.8.5-lightgrey?style=flat&logo=node.js&logoColor=white) 
-![Dotenv](https://img.shields.io/badge/dotenv-16.x-darkgreen?style=flat&logo=node.js&logoColor=white) 
-![BcryptJS](https://img.shields.io/badge/bcryptjs-2.4.3-yellow?style=flat&logo=javascript&logoColor=black) 
-![React](https://img.shields.io/badge/react-18.x-blue?style=flat&logo=react&logoColor=white) 
-![React Router](https://img.shields.io/badge/react_router-6.x-green?style=flat&logo=reactrouter&logoColor=white) 
-![Axios](https://img.shields.io/badge/axios-blue?style=flat&logo=axios&logoColor=white) 
-![Bootstrap](https://img.shields.io/badge/bootstrap-5.3-purple?style=flat&logo=bootstrap&logoColor=white)
+[![Node.js](https://img.shields.io/badge/node.js-18.x-green?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/) 
+[![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=flat&logo=express&logoColor=%2361DAFB)](https://expressjs.com/) 
+[![MongoDB](https://img.shields.io/badge/mongodb-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white)](https://www.mongodb.com/) 
+[![Mongoose](https://img.shields.io/badge/mongoose-orange?style=flat&logo=mongodb&logoColor=white)](https://mongoosejs.com/) 
+[![CORS](https://img.shields.io/badge/cors-2.8.5-lightgrey?style=flat&logo=node.js&logoColor=white)](https://www.npmjs.com/package/cors) 
+[![Dotenv](https://img.shields.io/badge/dotenv-16.x-darkgreen?style=flat&logo=node.js&logoColor=white)](https://www.npmjs.com/package/dotenv) 
+[![BcryptJS](https://img.shields.io/badge/bcryptjs-2.4.3-yellow?style=flat&logo=javascript&logoColor=black)](https://www.npmjs.com/package/bcryptjs) 
+[![React](https://img.shields.io/badge/react-18.x-blue?style=flat&logo=react&logoColor=white)](https://react.dev/) 
+[![React Router](https://img.shields.io/badge/react_router-6.x-green?style=flat&logo=reactrouter&logoColor=white)](https://reactrouter.com/) 
+[![Axios](https://img.shields.io/badge/axios-blue?style=flat&logo=axios&logoColor=white)](https://axios-http.com/) 
+[![Bootstrap](https://img.shields.io/badge/bootstrap-5.3-purple?style=flat&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+
 
 
 
