@@ -1,6 +1,6 @@
 # InkWell (Blogging Website)
 
-**InkWell** aims to provide an innovative and engaging blogging experience by leveraging the power of the **MERN stack**. With its user-friendly interface, dynamic content handling, and real-time updates, **InkWell** stands out as a modern, robust platform for both authors and readers.
+InkWell aims to provide an innovative and engaging blogging experience by leveraging the power of the MERN stack. With its user-friendly interface, dynamic content handling, and real-time updates, InkWell stands out as a modern, robust platform for both authors and readers.
 ---
 
 ## 📑 Table of Contents
