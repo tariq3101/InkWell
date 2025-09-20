@@ -135,21 +135,21 @@ REACT_APP_BACKEND_URL=http://localhost:5000
 
 ### Backend
 
-![Node.js](https://img.shields.io/badge/node.js-18.x-green?style=flat&logo=node.js&logoColor=white) 
-![Express.js](https://img.shields.io/badge/express.js-4.x-black?style=flat&logo=express&logoColor=%2361DAFB) 
-![Mongoose](https://img.shields.io/badge/mongoose-orange?style=flat&logo=mongodb&logoColor=white) 
-![MongoDB](https://img.shields.io/badge/mongodb-database-green?style=flat&logo=mongodb&logoColor=white) 
-![JWT](https://img.shields.io/badge/json%20web%20token-9.x-blue?style=flat&logo=jsonwebtokens&logoColor=white) 
-![BcryptJS](https://img.shields.io/badge/bcryptjs-2.4.3-yellow?style=flat&logo=javascript&logoColor=black) 
-![CORS](https://img.shields.io/badge/cors-2.8.5-lightgrey?style=flat&logo=node.js&logoColor=white) 
-![Dotenv](https://img.shields.io/badge/dotenv-16.x-darkgreen?style=flat&logo=node.js&logoColor=white) 
-![Multer](https://img.shields.io/badge/multer-1.4.5--lts.1-red?style=flat&logo=node.js&logoColor=white) 
-![Cloudinary](https://img.shields.io/badge/cloudinary-1.41.3-blue?style=flat&logo=cloudinary&logoColor=white) 
-![Multer Cloudinary](https://img.shields.io/badge/multer%20cloudinary-4.0.0-lightblue?style=flat&logo=cloudinary&logoColor=white) 
-![Axios](https://img.shields.io/badge/axios-blue?style=flat&logo=axios&logoColor=white) 
-![@google/generative-ai](https://img.shields.io/badge/google%20generative%20ai-0.19.0-orange?style=flat&logo=google&logoColor=white) 
-![Path](https://img.shields.io/badge/path-0.12.7-grey?style=flat&logo=node.js&logoColor=white) 
-![Nodemon](https://img.shields.io/badge/nodemon-3.1.7-green?style=flat&logo=nodemon&logoColor=%23BBDEAD)
+[![Node.js](https://img.shields.io/badge/node.js-18.x-green?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/) 
+[![Express.js](https://img.shields.io/badge/express.js-4.x-black?style=flat&logo=express&logoColor=%2361DAFB)](https://expressjs.com/) 
+[![Mongoose](https://img.shields.io/badge/mongoose-orange?style=flat&logo=mongodb&logoColor=white)](https://mongoosejs.com/) 
+[![MongoDB](https://img.shields.io/badge/mongodb-database-green?style=flat&logo=mongodb&logoColor=white)](https://www.mongodb.com/) 
+[![JWT](https://img.shields.io/badge/json%20web%20token-9.x-blue?style=flat&logo=jsonwebtokens&logoColor=white)](https://www.npmjs.com/package/jsonwebtoken) 
+[![BcryptJS](https://img.shields.io/badge/bcryptjs-2.4.3-yellow?style=flat&logo=javascript&logoColor=black)](https://www.npmjs.com/package/bcryptjs) 
+[![CORS](https://img.shields.io/badge/cors-2.8.5-lightgrey?style=flat&logo=node.js&logoColor=white)](https://www.npmjs.com/package/cors) 
+[![Dotenv](https://img.shields.io/badge/dotenv-16.x-darkgreen?style=flat&logo=node.js&logoColor=white)](https://www.npmjs.com/package/dotenv) 
+[![Multer](https://img.shields.io/badge/multer-1.4.5--lts.1-red?style=flat&logo=node.js&logoColor=white)](https://www.npmjs.com/package/multer) 
+[![Cloudinary](https://img.shields.io/badge/cloudinary-1.41.3-blue?style=flat&logo=cloudinary&logoColor=white)](https://cloudinary.com/) 
+[![Multer Cloudinary](https://img.shields.io/badge/multer%20cloudinary-4.0.0-lightblue?style=flat&logo=cloudinary&logoColor=white)](https://www.npmjs.com/package/multer-storage-cloudinary) 
+[![Axios](https://img.shields.io/badge/axios-blue?style=flat&logo=axios&logoColor=white)](https://axios-http.com/) 
+[![Google Generative AI](https://img.shields.io/badge/google%20generative%20ai-0.19.0-orange?style=flat&logo=google&logoColor=white)](https://www.npmjs.com/package/@google/generative-ai) 
+[![Path](https://img.shields.io/badge/path-0.12.7-grey?style=flat&logo=node.js&logoColor=white)](https://www.npmjs.com/package/path) 
+[![Nodemon](https://img.shields.io/badge/nodemon-3.1.7-green?style=flat&logo=nodemon&logoColor=%23BBDEAD)](https://www.npmjs.com/package/nodemon)
 
 
 
