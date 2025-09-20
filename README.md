@@ -135,23 +135,21 @@ REACT_APP_BACKEND_URL=http://localhost:5000
 
 ### Backend
 
-| Technology | Description | Link |
-|------------|-------------|------|
-| ![Node.js](https://img.shields.io/badge/Node.js-18.x-green?logo=node.js) | JavaScript runtime for backend | [Node.js](https://nodejs.org/) |
-| ![Express.js](https://img.shields.io/badge/Express.js-4.x-black?logo=express) | Web framework for Node.js | [Express.js](https://expressjs.com/) |
-| ![Mongoose](https://img.shields.io/badge/Mongoose-ODM-orange?logo=mongodb) | MongoDB object modeling for Node.js | [Mongoose](https://mongoosejs.com/) |
-| ![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?logo=mongodb) | NoSQL database | [MongoDB](https://www.mongodb.com/) |
-| ![JWT](https://img.shields.io/badge/JSON%20Web%20Token-9.x-blue?logo=jsonwebtokens) | Authentication & Authorization | [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) |
-| ![BcryptJS](https://img.shields.io/badge/BcryptJS-2.4.3-yellow?logo=javascript) | Password hashing | [bcryptjs](https://www.npmjs.com/package/bcryptjs) |
-| ![CORS](https://img.shields.io/badge/CORS-2.8.5-lightgrey?logo=node.js) | Middleware for handling cross-origin requests | [CORS](https://www.npmjs.com/package/cors) |
-| ![Dotenv](https://img.shields.io/badge/Dotenv-16.x-darkgreen?logo=node.js) | Load environment variables | [Dotenv](https://www.npmjs.com/package/dotenv) |
-| ![Multer](https://img.shields.io/badge/Multer-1.4.5--lts.1-red?logo=node.js) | File upload middleware | [Multer](https://www.npmjs.com/package/multer) |
-| ![Cloudinary](https://img.shields.io/badge/Cloudinary-1.41.3-blue?logo=cloudinary) | Cloud storage for images/videos | [Cloudinary](https://cloudinary.com/) |
-| ![Multer Cloudinary](https://img.shields.io/badge/Multer%20Cloudinary-4.0.0-lightblue?logo=cloudinary) | Cloudinary integration with Multer | [multer-storage-cloudinary](https://www.npmjs.com/package/multer-storage-cloudinary) |
-| ![Axios](https://img.shields.io/badge/Axios-HTTP%20Client-blue?logo=axios) | HTTP client for API calls | [Axios](https://axios-http.com/) |
-| ![@google/generative-ai](https://img.shields.io/badge/Google%20Generative%20AI-0.19.0-orange?logo=google) | Google Gemini API SDK | [@google/generative-ai](https://www.npmjs.com/package/@google/generative-ai) |
-| ![Path](https://img.shields.io/badge/Path-0.12.7-grey?logo=node.js) | Path utilities for Node.js | [path](https://www.npmjs.com/package/path) |
-| ![Nodemon](https://img.shields.io/badge/Nodemon-3.1.7-green?logo=nodemon) | Auto-restart Node.js server | [Nodemon](https://www.npmjs.com/package/nodemon) |
+![Node.js](https://img.shields.io/badge/node.js-18.x-green?style=flat&logo=node.js&logoColor=white) 
+![Express.js](https://img.shields.io/badge/express.js-4.x-black?style=flat&logo=express&logoColor=%2361DAFB) 
+![Mongoose](https://img.shields.io/badge/mongoose-orange?style=flat&logo=mongodb&logoColor=white) 
+![MongoDB](https://img.shields.io/badge/mongodb-database-green?style=flat&logo=mongodb&logoColor=white) 
+![JWT](https://img.shields.io/badge/json%20web%20token-9.x-blue?style=flat&logo=jsonwebtokens&logoColor=white) 
+![BcryptJS](https://img.shields.io/badge/bcryptjs-2.4.3-yellow?style=flat&logo=javascript&logoColor=black) 
+![CORS](https://img.shields.io/badge/cors-2.8.5-lightgrey?style=flat&logo=node.js&logoColor=white) 
+![Dotenv](https://img.shields.io/badge/dotenv-16.x-darkgreen?style=flat&logo=node.js&logoColor=white) 
+![Multer](https://img.shields.io/badge/multer-1.4.5--lts.1-red?style=flat&logo=node.js&logoColor=white) 
+![Cloudinary](https://img.shields.io/badge/cloudinary-1.41.3-blue?style=flat&logo=cloudinary&logoColor=white) 
+![Multer Cloudinary](https://img.shields.io/badge/multer%20cloudinary-4.0.0-lightblue?style=flat&logo=cloudinary&logoColor=white) 
+![Axios](https://img.shields.io/badge/axios-blue?style=flat&logo=axios&logoColor=white) 
+![@google/generative-ai](https://img.shields.io/badge/google%20generative%20ai-0.19.0-orange?style=flat&logo=google&logoColor=white) 
+![Path](https://img.shields.io/badge/path-0.12.7-grey?style=flat&logo=node.js&logoColor=white) 
+![Nodemon](https://img.shields.io/badge/nodemon-3.1.7-green?style=flat&logo=nodemon&logoColor=%23BBDEAD)
 
 
 
