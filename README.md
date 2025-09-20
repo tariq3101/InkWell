@@ -157,19 +157,18 @@ REACT_APP_BACKEND_URL=http://localhost:5000
 
 ### Frontend
 
-| Technology | Description | Link |
-|------------|-------------|------|
-| ![Node.js](https://img.shields.io/badge/Node.js-18.x-green?logo=node.js) | JavaScript runtime for backend | [Node.js](https://nodejs.org/) |
-| ![Express.js](https://img.shields.io/badge/Express.js-4.x-black?logo=express) | Web framework for Node.js | [Express.js](https://expressjs.com/) |
-| ![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?logo=mongodb) | NoSQL database | [MongoDB](https://www.mongodb.com/) |
-| ![Mongoose](https://img.shields.io/badge/Mongoose-ODM-orange?logo=mongodb) | MongoDB object modeling for Node.js | [Mongoose](https://mongoosejs.com/) |
-| ![CORS](https://img.shields.io/badge/CORS-2.8.5-lightgrey?logo=node.js) | Middleware for handling cross-origin requests | [CORS](https://www.npmjs.com/package/cors) |
-| ![Dotenv](https://img.shields.io/badge/Dotenv-16.x-darkgreen?logo=node.js) | Load environment variables | [Dotenv](https://www.npmjs.com/package/dotenv) |
-| ![BcryptJS](https://img.shields.io/badge/BcryptJS-2.4.3-yellow?logo=javascript) | Password hashing | [BcryptJS](https://www.npmjs.com/package/bcryptjs) |
-| ![React](https://img.shields.io/badge/React-18.x-blue?logo=react) | Frontend UI library | [React](https://react.dev/) |
-| ![React Router](https://img.shields.io/badge/React%20Router-6.x-green?logo=reactrouter) | Client-side routing | [React Router](https://reactrouter.com/) |
-| ![Axios](https://img.shields.io/badge/Axios-HTTP%20Client-blue?logo=axios) | HTTP client for API calls | [Axios](https://axios-http.com/) |
-| ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-purple?logo=bootstrap) | CSS Framework | [Bootstrap](https://getbootstrap.com/) |
+![Node.js](https://img.shields.io/badge/node.js-18.x-green?style=flat&logo=node.js&logoColor=white) 
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=flat&logo=express&logoColor=%2361DAFB) 
+![MongoDB](https://img.shields.io/badge/mongodb-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white) 
+![Mongoose](https://img.shields.io/badge/mongoose-orange?style=flat&logo=mongodb&logoColor=white) 
+![CORS](https://img.shields.io/badge/cors-2.8.5-lightgrey?style=flat&logo=node.js&logoColor=white) 
+![Dotenv](https://img.shields.io/badge/dotenv-16.x-darkgreen?style=flat&logo=node.js&logoColor=white) 
+![BcryptJS](https://img.shields.io/badge/bcryptjs-2.4.3-yellow?style=flat&logo=javascript&logoColor=black) 
+![React](https://img.shields.io/badge/react-18.x-blue?style=flat&logo=react&logoColor=white) 
+![React Router](https://img.shields.io/badge/react_router-6.x-green?style=flat&logo=reactrouter&logoColor=white) 
+![Axios](https://img.shields.io/badge/axios-blue?style=flat&logo=axios&logoColor=white) 
+![Bootstrap](https://img.shields.io/badge/bootstrap-5.3-purple?style=flat&logo=bootstrap&logoColor=white)
+
 
 
 ---
