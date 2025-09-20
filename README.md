@@ -94,8 +94,8 @@ npm install
 
 ### Run Backend
 ```bash
-cd backend
-npm run start
+cd api
+npm start
 ```
 Or
 ```
@@ -104,16 +104,12 @@ nodemon index.js
 
 ### Run Frontend
 ```bash
-cd frontend
-npm run dev
-```
-Or
-```
+cd client
 npm start
 ```
 
-The frontend should now be available at `http://localhost:3000` (or configured port).  
-The backend will run on `http://localhost:5000` (or configured port).
+Frontend: http://localhost:3000 (or configured port)
+Backend: http://localhost:5000 (or configured port)
 
 ---
 
