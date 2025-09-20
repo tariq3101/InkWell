@@ -2,6 +2,8 @@
 
 InkWell aims to provide an innovative and engaging blogging experience by leveraging the power of the MERN stack. With its user-friendly interface, dynamic content handling, and real-time updates, InkWell stands out as a modern, robust platform for both authors and readers.
 ---
+Project URL: https://ink-welll.vercel.app/
+---
 
 ## 📑 Table of Contents
 - [Introduction](#-introduction)
@@ -13,9 +15,7 @@ InkWell aims to provide an innovative and engaging blogging experience by levera
 - [Dependencies](#-dependencies)
 - [Contributors](#-contributors)
   
----
-Project URL: https://ink-welll.vercel.app/
----
+
 
 ## 🚀 Introduction
 This project provides a **full-stack application** to manage blogs. It consists of:
